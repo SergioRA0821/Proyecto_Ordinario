@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Proyecto_Ordinario
     internal class Acciones : IAcciones
     {
         List<Auto> ListaAuto = new List<Auto>();
+        Correo correo = new Correo();
         public bool ActualizarAuto(int IdActual, int NuevoId, string NuevaMarca, string NuevoModelo, int NuevoAnio, string NuevoColor, double NuevoPrecio, string NuevoEstado)
         {
             throw new NotImplementedException();
@@ -17,7 +19,16 @@ namespace Proyecto_Ordinario
 
         public List<Auto> Consultar()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return ListaAuto;
+
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                throw;
+            }
         }
 
         public bool EliminarAuto(int Id)
@@ -35,7 +46,7 @@ namespace Proyecto_Ordinario
             try
             {
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string filePath = Path.Combine(desktopPath, "ListaAlumnos.xlsx");
+                string filePath = Path.Combine(desktopPath, "Autos_Importacion.xlsx");
 
                 if (!File.Exists(filePath))
                     return false;
@@ -44,18 +55,20 @@ namespace Proyecto_Ordinario
 
                 using (var workbook = new XLWorkbook(filePath))
                 {
-                    var worksheet = workbook.Worksheet("Alumnos");
-                    var rows = worksheet.RowsUsed().Skip(1); // Omitir encabezados
+                    var worksheet = workbook.Worksheet("Autos");
+                    var rows = worksheet.RowsUsed().Skip(1);
 
                     foreach (var row in rows)
                     {
-                        string nombre = row.Cell(1).GetString();
-                        int edad = int.Parse(row.Cell(2).GetValue<string>());
-                        string carrera = row.Cell(3).GetString();
-                        int matricula = int.Parse(row.Cell(4).GetValue<string>());
-                        DateTime fechaIngreso = DateTime.Parse(row.Cell(5).GetString());
+                        int Id = int.Parse(row.Cell(1).GetValue<string>());
+                        string Marca = row.Cell(2).GetString();
+                        string Modelo = row.Cell(3).GetString();
+                        int Anio = int.Parse(row.Cell(4).GetValue<string>());
+                        string Color = row.Cell(5).GetString();
+                        double Precio = double.Parse(row.Cell(6).GetValue<string>());
+                        string Estado = row.Cell(7).GetString();
 
-                        newList.Add(new Auto(id, marca, modelo, anio, color, precio, estado));
+                        newList.Add(new Auto(Id, Marca, Modelo, Anio, Color, Precio, Estado));
                     }
                 }
 
