@@ -34,20 +34,24 @@
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.txbID = new System.Windows.Forms.TextBox();
             this.txbMarca = new System.Windows.Forms.TextBox();
             this.txbModelo = new System.Windows.Forms.TextBox();
             this.txbAnio = new System.Windows.Forms.TextBox();
             this.txbColor = new System.Windows.Forms.TextBox();
             this.txbPrecio = new System.Windows.Forms.TextBox();
             this.txbEstado = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txbIDElim = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txbNuevoID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +62,7 @@
             this.DGDatos.Name = "DGDatos";
             this.DGDatos.RowHeadersWidth = 51;
             this.DGDatos.RowTemplate.Height = 24;
-            this.DGDatos.Size = new System.Drawing.Size(823, 365);
+            this.DGDatos.Size = new System.Drawing.Size(879, 365);
             this.DGDatos.TabIndex = 0;
             // 
             // btnConsultar
@@ -73,7 +77,7 @@
             // 
             // btnImportar
             // 
-            this.btnImportar.Location = new System.Drawing.Point(335, 394);
+            this.btnImportar.Location = new System.Drawing.Point(362, 394);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(139, 56);
             this.btnImportar.TabIndex = 2;
@@ -83,12 +87,13 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(635, 394);
+            this.btnExportar.Location = new System.Drawing.Point(687, 394);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(139, 56);
             this.btnExportar.TabIndex = 3;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnAgregar
             // 
@@ -98,6 +103,7 @@
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnActualizar
             // 
@@ -107,69 +113,54 @@
             this.btnActualizar.TabIndex = 5;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // txbID
-            // 
-            this.txbID.Location = new System.Drawing.Point(959, 48);
-            this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(154, 22);
-            this.txbID.TabIndex = 6;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // txbMarca
             // 
-            this.txbMarca.Location = new System.Drawing.Point(959, 111);
+            this.txbMarca.Location = new System.Drawing.Point(964, 91);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(154, 22);
             this.txbMarca.TabIndex = 7;
             // 
             // txbModelo
             // 
-            this.txbModelo.Location = new System.Drawing.Point(959, 173);
+            this.txbModelo.Location = new System.Drawing.Point(964, 153);
             this.txbModelo.Name = "txbModelo";
             this.txbModelo.Size = new System.Drawing.Size(154, 22);
             this.txbModelo.TabIndex = 8;
             // 
             // txbAnio
             // 
-            this.txbAnio.Location = new System.Drawing.Point(959, 241);
+            this.txbAnio.Location = new System.Drawing.Point(964, 221);
             this.txbAnio.Name = "txbAnio";
             this.txbAnio.Size = new System.Drawing.Size(154, 22);
             this.txbAnio.TabIndex = 9;
             // 
             // txbColor
             // 
-            this.txbColor.Location = new System.Drawing.Point(959, 313);
+            this.txbColor.Location = new System.Drawing.Point(964, 293);
             this.txbColor.Name = "txbColor";
             this.txbColor.Size = new System.Drawing.Size(154, 22);
             this.txbColor.TabIndex = 10;
             // 
             // txbPrecio
             // 
-            this.txbPrecio.Location = new System.Drawing.Point(959, 388);
+            this.txbPrecio.Location = new System.Drawing.Point(964, 368);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(154, 22);
             this.txbPrecio.TabIndex = 11;
             // 
             // txbEstado
             // 
-            this.txbEstado.Location = new System.Drawing.Point(959, 469);
+            this.txbEstado.Location = new System.Drawing.Point(964, 449);
             this.txbEstado.Name = "txbEstado";
             this.txbEstado.Size = new System.Drawing.Size(154, 22);
             this.txbEstado.TabIndex = 12;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(956, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "ID";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(956, 92);
+            this.label2.Location = new System.Drawing.Point(961, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 14;
@@ -178,7 +169,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(956, 154);
+            this.label3.Location = new System.Drawing.Point(961, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 15;
@@ -187,7 +178,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(956, 222);
+            this.label4.Location = new System.Drawing.Point(961, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 16);
             this.label4.TabIndex = 16;
@@ -196,7 +187,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(956, 294);
+            this.label5.Location = new System.Drawing.Point(961, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 17;
@@ -205,7 +196,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(956, 369);
+            this.label6.Location = new System.Drawing.Point(961, 349);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 18;
@@ -214,31 +205,88 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(956, 450);
+            this.label7.Location = new System.Drawing.Point(961, 430);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 19;
             this.label7.Text = "Estado";
             // 
+            // txbIDElim
+            // 
+            this.txbIDElim.Location = new System.Drawing.Point(335, 550);
+            this.txbIDElim.Name = "txbIDElim";
+            this.txbIDElim.Size = new System.Drawing.Size(154, 22);
+            this.txbIDElim.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(332, 531);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 16);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "ID a eliminar";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(347, 589);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(115, 34);
+            this.btnEliminar.TabIndex = 22;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(984, 621);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(115, 34);
+            this.btnLimpiar.TabIndex = 23;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(961, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 16);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Nuevo ID";
+            // 
+            // txbNuevoID
+            // 
+            this.txbNuevoID.Location = new System.Drawing.Point(964, 36);
+            this.txbNuevoID.Name = "txbNuevoID";
+            this.txbNuevoID.Size = new System.Drawing.Size(154, 22);
+            this.txbNuevoID.TabIndex = 24;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 609);
+            this.ClientSize = new System.Drawing.Size(1213, 726);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txbNuevoID);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txbIDElim);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txbEstado);
             this.Controls.Add(this.txbPrecio);
             this.Controls.Add(this.txbColor);
             this.Controls.Add(this.txbAnio);
             this.Controls.Add(this.txbModelo);
             this.Controls.Add(this.txbMarca);
-            this.Controls.Add(this.txbID);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnExportar);
@@ -261,19 +309,23 @@
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.TextBox txbMarca;
         private System.Windows.Forms.TextBox txbModelo;
         private System.Windows.Forms.TextBox txbAnio;
         private System.Windows.Forms.TextBox txbColor;
         private System.Windows.Forms.TextBox txbPrecio;
         private System.Windows.Forms.TextBox txbEstado;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbIDElim;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txbNuevoID;
     }
 }

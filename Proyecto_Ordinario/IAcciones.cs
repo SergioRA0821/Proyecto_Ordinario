@@ -12,7 +12,7 @@ namespace Proyecto_Ordinario
         List<Auto> Consultar();
         bool InsertarAuto(int Id, string Marca, string Modelo, int Anio, string Color, double Precio, string Estado);
         bool EliminarAuto(int Id);
-        bool ActualizarAuto(int IdActual, int NuevoId, string NuevaMarca, string NuevoModelo, int NuevoAnio, string NuevoColor, double NuevoPrecio, string NuevoEstado);
+        bool ActualizarAuto(int NuevoId, string NuevaMarca, string NuevoModelo, int NuevoAnio, string NuevoColor, double NuevoPrecio, string NuevoEstado);
         bool ExportarExcel();
     }
 }
