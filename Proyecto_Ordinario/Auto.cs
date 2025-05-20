@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Ordinario
 {
-    internal class Auto
+    internal class Auto : Vehiculo
     {
         public Auto() { }
         public Auto(int id, string marca, string modelo, int anio, string color, double precio, string estado)
+            : base(precio, estado)
         {
             Id = id;
             Marca = marca;
             Modelo = modelo;
             Anio = anio;
             Color = color;
-            Precio = precio;
-            Estado = estado;
+
         }
        
         public int Id { get; set; }
@@ -25,7 +25,6 @@ namespace Proyecto_Ordinario
         public string Modelo { get; set; }
         public int Anio { get; set; }
         public string Color { get; set; }
-        public double Precio { get; set; }
-        public string Estado { get; set; }
+
     }
 }
