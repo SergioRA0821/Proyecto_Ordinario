@@ -99,7 +99,6 @@ namespace Proyecto_Ordinario
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txbIDElim.Text = "";
-            txbIDActual.Text = "";
             txbNuevoID.Text = "";
             txbMarca.Text = "";
             txbModelo.Text = "";
@@ -107,6 +106,11 @@ namespace Proyecto_Ordinario
             txbColor.Text = "";
             txbPrecio.Text = "";
             txbEstado.Text = "";
+        }
+
+        private void txbNuevoID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
