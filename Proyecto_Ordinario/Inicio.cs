@@ -112,5 +112,13 @@ namespace Proyecto_Ordinario
         {
 
         }
+
+        private void btnContar_Click(object sender, EventArgs e)
+        {
+            int disponibles = acc.ContarDisponibles();
+            MessageBox.Show($"Hay {disponibles} carros disponibles");
+
+
+        }
     }
 }

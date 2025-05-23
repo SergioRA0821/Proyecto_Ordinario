@@ -8,6 +8,7 @@ namespace Proyecto_Ordinario
 {
     internal interface IAcciones
     {
+        int ContarDisponibles();
         bool ImportardeExcel();
         List<Auto> Consultar();
         bool InsertarAuto(int Id, string Marca, string Modelo, int Anio, string Color, double Precio, string Estado);

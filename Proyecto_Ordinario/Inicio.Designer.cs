@@ -52,6 +52,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txbNuevoID = new System.Windows.Forms.TextBox();
+            this.btnContar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             this.DGDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGDatos.Location = new System.Drawing.Point(9, 10);
-            this.DGDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DGDatos.Name = "DGDatos";
             this.DGDatos.RowHeadersWidth = 51;
             this.DGDatos.RowTemplate.Height = 24;
@@ -69,7 +70,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Location = new System.Drawing.Point(22, 320);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(104, 46);
             this.btnConsultar.TabIndex = 1;
@@ -80,7 +81,7 @@
             // btnImportar
             // 
             this.btnImportar.Location = new System.Drawing.Point(272, 320);
-            this.btnImportar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImportar.Margin = new System.Windows.Forms.Padding(2);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(104, 46);
             this.btnImportar.TabIndex = 2;
@@ -91,7 +92,7 @@
             // btnExportar
             // 
             this.btnExportar.Location = new System.Drawing.Point(515, 320);
-            this.btnExportar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(104, 46);
             this.btnExportar.TabIndex = 3;
@@ -102,7 +103,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(671, 442);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(86, 28);
             this.btnAgregar.TabIndex = 4;
@@ -113,7 +114,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(800, 442);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(86, 28);
             this.btnActualizar.TabIndex = 5;
@@ -124,7 +125,7 @@
             // txbMarca
             // 
             this.txbMarca.Location = new System.Drawing.Point(723, 74);
-            this.txbMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(116, 20);
             this.txbMarca.TabIndex = 7;
@@ -132,7 +133,7 @@
             // txbModelo
             // 
             this.txbModelo.Location = new System.Drawing.Point(723, 124);
-            this.txbModelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbModelo.Margin = new System.Windows.Forms.Padding(2);
             this.txbModelo.Name = "txbModelo";
             this.txbModelo.Size = new System.Drawing.Size(116, 20);
             this.txbModelo.TabIndex = 8;
@@ -140,7 +141,7 @@
             // txbAnio
             // 
             this.txbAnio.Location = new System.Drawing.Point(723, 180);
-            this.txbAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbAnio.Margin = new System.Windows.Forms.Padding(2);
             this.txbAnio.Name = "txbAnio";
             this.txbAnio.Size = new System.Drawing.Size(116, 20);
             this.txbAnio.TabIndex = 9;
@@ -148,7 +149,7 @@
             // txbColor
             // 
             this.txbColor.Location = new System.Drawing.Point(723, 238);
-            this.txbColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbColor.Margin = new System.Windows.Forms.Padding(2);
             this.txbColor.Name = "txbColor";
             this.txbColor.Size = new System.Drawing.Size(116, 20);
             this.txbColor.TabIndex = 10;
@@ -156,7 +157,7 @@
             // txbPrecio
             // 
             this.txbPrecio.Location = new System.Drawing.Point(723, 299);
-            this.txbPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(116, 20);
             this.txbPrecio.TabIndex = 11;
@@ -164,7 +165,7 @@
             // txbEstado
             // 
             this.txbEstado.Location = new System.Drawing.Point(723, 365);
-            this.txbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.txbEstado.Name = "txbEstado";
             this.txbEstado.Size = new System.Drawing.Size(116, 20);
             this.txbEstado.TabIndex = 12;
@@ -231,8 +232,8 @@
             // 
             // txbIDElim
             // 
-            this.txbIDElim.Location = new System.Drawing.Point(251, 447);
-            this.txbIDElim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbIDElim.Location = new System.Drawing.Point(22, 442);
+            this.txbIDElim.Margin = new System.Windows.Forms.Padding(2);
             this.txbIDElim.Name = "txbIDElim";
             this.txbIDElim.Size = new System.Drawing.Size(116, 20);
             this.txbIDElim.TabIndex = 20;
@@ -240,7 +241,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(249, 431);
+            this.label8.Location = new System.Drawing.Point(20, 426);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 13);
@@ -250,8 +251,8 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(260, 479);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(31, 474);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 28);
             this.btnEliminar.TabIndex = 22;
@@ -262,7 +263,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(738, 505);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(86, 28);
             this.btnLimpiar.TabIndex = 23;
@@ -283,17 +284,29 @@
             // txbNuevoID
             // 
             this.txbNuevoID.Location = new System.Drawing.Point(723, 29);
-            this.txbNuevoID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbNuevoID.Margin = new System.Windows.Forms.Padding(2);
             this.txbNuevoID.Name = "txbNuevoID";
             this.txbNuevoID.Size = new System.Drawing.Size(116, 20);
             this.txbNuevoID.TabIndex = 24;
             this.txbNuevoID.TextChanged += new System.EventHandler(this.txbNuevoID_TextChanged);
+            // 
+            // btnContar
+            // 
+            this.btnContar.Location = new System.Drawing.Point(272, 442);
+            this.btnContar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnContar.Name = "btnContar";
+            this.btnContar.Size = new System.Drawing.Size(104, 46);
+            this.btnContar.TabIndex = 26;
+            this.btnContar.Text = "Contar";
+            this.btnContar.UseVisualStyleBackColor = true;
+            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 590);
+            this.Controls.Add(this.btnContar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txbNuevoID);
             this.Controls.Add(this.btnLimpiar);
@@ -318,7 +331,7 @@
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.DGDatos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inicio";
             this.Text = "Inicio";
             ((System.ComponentModel.ISupportInitialize)(this.DGDatos)).EndInit();
@@ -353,5 +366,6 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txbNuevoID;
+        private System.Windows.Forms.Button btnContar;
     }
 }

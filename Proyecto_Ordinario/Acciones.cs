@@ -16,6 +16,19 @@ namespace Proyecto_Ordinario
         List<Auto> ListaAuto = new List<Auto>();
         Correo correo = new Correo();
         Auto a = new Auto();
+
+        public int ContarDisponibles()
+        {
+            int contador = 0;
+            foreach (var d in ListaAuto)
+            {
+                if (d.Estado == "Disponible")
+                {
+                    contador = contador + 1;
+                }
+            }
+            return contador;
+        }
         public bool ActualizarAuto(int NuevoId, string NuevaMarca, string NuevoModelo, int NuevoAnio, string NuevoColor, double NuevoPrecio, string NuevoEstado)
         {
             try
